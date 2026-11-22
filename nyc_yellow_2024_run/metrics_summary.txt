@@ -1,0 +1,2 @@
+Linear Regression | RMSE=25480.24 | MAE=16070.47 | R^2=0.672
+Random Forest | RMSE=11532.53 | MAE=4442.58 | R^2=0.933

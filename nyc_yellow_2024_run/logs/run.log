@@ -1,0 +1,31 @@
+[NYC2024] Spark started.
+[NYC2024] Loaded cleaned parquet (no IQR): 12 files from ./cleaned_data_with_zones.
+[NYC2024] Generating figures...
+[NYC2024] Saved figure: /Users/jasvinderthukral/GitHub/MAST30034_Python/data/nyc_yellow_2024_run/figures/01_heatmap_hourweek_revenue.png
+[NYC2024] Saved figure: /Users/jasvinderthukral/GitHub/MAST30034_Python/data/nyc_yellow_2024_run/figures/01_heatmap_hourweek_trips.png
+[NYC2024] Saved figure: /Users/jasvinderthukral/GitHub/MAST30034_Python/data/nyc_yellow_2024_run/figures/02_weekday_weekend_revenue.png
+[NYC2024] Saved figure: /Users/jasvinderthukral/GitHub/MAST30034_Python/data/nyc_yellow_2024_run/figures/03_holiday_nonholiday.png
+[NYC2024] Saved figure: /Users/jasvinderthukral/GitHub/MAST30034_Python/data/nyc_yellow_2024_run/figures/04_event_borough.png
+[NYC2024] Saved figure: /Users/jasvinderthukral/GitHub/MAST30034_Python/data/nyc_yellow_2024_run/figures/05_top_pickups.png
+[NYC2024] Saved figure: /Users/jasvinderthukral/GitHub/MAST30034_Python/data/nyc_yellow_2024_run/figures/06_top_revenue.png
+[NYC2024] [Geo] Downloading TLC taxi_zones.zip ...
+[NYC2024] Saved figure: /Users/jasvinderthukral/GitHub/MAST30034_Python/data/nyc_yellow_2024_run/figures/07_geo_revenue_tip.png
+[NYC2024] Saved table: /Users/jasvinderthukral/GitHub/MAST30034_Python/data/nyc_yellow_2024_run/tables/pickups_by_zone_2024.csv
+[NYC2024] Saved table: /Users/jasvinderthukral/GitHub/MAST30034_Python/data/nyc_yellow_2024_run/tables/dropoffs_by_zone_2024.csv
+[NYC2024] Saved figure: /Users/jasvinderthukral/GitHub/MAST30034_Python/data/nyc_yellow_2024_run/figures/geo_pickups_dropoffs_2024.png
+[NYC2024] Saved figure: /Users/jasvinderthukral/GitHub/MAST30034_Python/data/nyc_yellow_2024_run/figures/09_fare_tip_hour.png
+[NYC2024] Saved figure: /Users/jasvinderthukral/GitHub/MAST30034_Python/data/nyc_yellow_2024_run/figures/10_revenue_trip_borough.png
+[NYC2024] Saved table: /Users/jasvinderthukral/GitHub/MAST30034_Python/data/nyc_yellow_2024_run/tables/revenue_per_trip_borough.csv
+[NYC2024] Saved figure: /Users/jasvinderthukral/GitHub/MAST30034_Python/data/nyc_yellow_2024_run/figures/events_by_borough.png
+[NYC2024] Saved table: /Users/jasvinderthukral/GitHub/MAST30034_Python/data/nyc_yellow_2024_run/tables/events_by_borough.csv
+[NYC2024] Saved figure: /Users/jasvinderthukral/GitHub/MAST30034_Python/data/nyc_yellow_2024_run/figures/events_top_venues.png
+[NYC2024] Saved table: /Users/jasvinderthukral/GitHub/MAST30034_Python/data/nyc_yellow_2024_run/tables/events_top_venues.csv
+[NYC2024] Saved figure: /Users/jasvinderthukral/GitHub/MAST30034_Python/data/nyc_yellow_2024_run/figures/monthly_trends_trips_revenue.png
+[NYC2024] Saved table: /Users/jasvinderthukral/GitHub/MAST30034_Python/data/nyc_yellow_2024_run/tables/monthly_trips_revenue.csv
+[NYC2024] Saved figure: /Users/jasvinderthukral/GitHub/MAST30034_Python/data/nyc_yellow_2024_run/figures/tip_pct_by_hour.png
+[NYC2024] Modelling...
+[NYC2024] Saved table: /Users/jasvinderthukral/GitHub/MAST30034_Python/data/nyc_yellow_2024_run/tables/model_metrics.csv
+[NYC2024] Saved figure: /Users/jasvinderthukral/GitHub/MAST30034_Python/data/nyc_yellow_2024_run/figures/model_parity_test.png
+[NYC2024] Saved figure: /Users/jasvinderthukral/GitHub/MAST30034_Python/data/nyc_yellow_2024_run/figures/model_residuals_over_time_rf.png
+[NYC2024] Saved figure: /Users/jasvinderthukral/GitHub/MAST30034_Python/data/nyc_yellow_2024_run/figures/rf_feature_importance.png
+[NYC2024] All done. See folder: /Users/jasvinderthukral/GitHub/MAST30034_Python/data/nyc_yellow_2024_run
