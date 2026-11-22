@@ -1,52 +1,150 @@
-# MAST30034 Project 1 — Individual Submission (Harjas500)
+# NYC Taxi Revenue Forecasting
 
-This repository contains my submission for **MAST30034 – Applied Data Science (Project 1, 2025)**.  
-The project analyses **NYC Yellow Taxi trip data (2024)** with external datasets (parks events and holidays) to study demand patterns and provide recommendations.
+An end-to-end data science project analysing 2024 New York City Yellow Taxi trip data to identify revenue patterns, understand the influence of external events, and forecast taxi revenue using machine learning.
+
+## Project Overview
+
+This project explores NYC Yellow Taxi trip data from 2024, combining trip records with public holiday and NYC Parks special event datasets to investigate factors influencing taxi revenue.
+
+The workflow covers data preprocessing, exploratory data analysis (EDA), feature engineering, and predictive modelling. Linear Regression and Random Forest models are developed and evaluated to compare their ability to forecast taxi revenue.
+
+## Objectives
+
+- Analyse taxi revenue patterns across different hours, days, and months.
+- Investigate the relationship between public holidays, special events, and taxi revenue.
+- Explore spatial and temporal patterns in taxi activity.
+- Develop and evaluate machine learning models for revenue forecasting.
 
 ## Repository Structure
-```
-notebooks/
- └── Assignment1_ADS.ipynb
-data/
- ├── parks_special_events.csv
- └── nyc_all_holidays_2024.csv
-nyc_yellow_2024_run/
-requirements.txt
-.gitignore
-README.md
-```
 
-## Setup
-```bash
-git clone https://github.com/MAST30034-AppliedDataScience/project-1-individual-Harjas500.git
-cd project-1-individual-Harjas500
-python3 -m venv venv
-source venv/bin/activate
-# venv\Scripts\activate   # Windows
-pip install -r requirements.txt
+```text
+nyc-taxi-revenue-forecasting/
+│
+├── notebooks/
+│   └── Assignment1_ADS.ipynb
+│
+├── data/
+│   ├── Parks_Special_Events.csv
+│   └── nyc_all_holidays_2024.csv
+│
+├── nyc_yellow_2024_run/
+│   ├── figures/
+│   ├── logs/
+│   ├── tables/
+│   ├── taxi_zones_shp/
+│   └── metrics_summary.txt
+│
+├── requirements.txt
+├── .gitignore
+└── README.md
 ```
 
 ## Data Sources
-1. **NYC Yellow Taxi Trips (2024)**  
-   New York City Taxi and Limousine Commission. TLC trip record data. Accessed August 27, 2025.  
-   <https://www.nyc.gov/site/tlc/about/tlc-trip-record-data.page>
 
-2. **NYC Parks Special Events (2024)**  
-   NYC Open Data. NYC parks special events dataset. Accessed August 27, 2025.  
-   <https://catalog.data.gov/dataset/parks-special-events>
+The analysis uses the following datasets:
+
+1. **NYC Yellow Taxi Trip Records (2024)**  
+   New York City Taxi and Limousine Commission (TLC).  
+   [TLC Trip Record Data](https://www.nyc.gov/site/tlc/about/tlc-trip-record-data.page)
+
+2. **NYC Parks Special Events**  
+   NYC Open Data.  
+   [NYC Parks Special Events Dataset](https://catalog.data.gov/dataset/parks-special-events)
 
 3. **NYC Public Holidays (2024)**  
-   Office Holidays. Public holidays in New York (2024). Accessed August 27, 2025.  
-   <https://www.officeholidays.com/countries/usa/new-york/2024>
+   Office Holidays.  
+   [New York Public Holidays 2024](https://www.officeholidays.com/countries/usa/new-york/2024)
 
-## Run the Notebook
+## Methodology
+
+### 1. Data Preprocessing
+- Processed NYC Yellow Taxi trip records using PySpark.
+- Cleaned and prepared external parks events and public holiday datasets.
+- Integrated relevant datasets to support further analysis.
+
+### 2. Exploratory Data Analysis
+- Examined revenue distributions and temporal trends.
+- Analysed hourly and daily revenue patterns.
+- Investigated holiday and special event effects.
+- Explored spatial patterns across taxi zones.
+
+### 3. Feature Engineering
+Developed features including:
+- Hour, day, and month of trip.
+- Trip duration and tip percentage.
+- Public holiday indicators.
+- Special event indicators.
+
+### 4. Machine Learning Models
+Developed and evaluated two regression models:
+
+- **Linear Regression** – used as a baseline predictive model.
+- **Random Forest Regressor** – used to capture more complex relationships in the data.
+
+The training data covered January–October 2024, with November–December 2024 used for testing.
+
+## Model Performance
+
+The following results are reported in the project evaluation:
+
+| Model | RMSE | MAE | R² |
+|---|---:|---:|---:|
+| Linear Regression | 25,480 | 16,070 | 0.672 |
+| Random Forest | 11,533 | 4,443 | 0.933 |
+
+The Random Forest model achieved stronger performance across all three reported evaluation metrics, indicating a better fit to the test data than the Linear Regression baseline.
+
+## Technologies Used
+
+- **Programming:** Python
+- **Big Data Processing:** PySpark
+- **Data Analysis:** Pandas, NumPy
+- **Visualisation:** Matplotlib, Seaborn
+- **Machine Learning:** Scikit-learn
+- **Development:** Jupyter Notebook
+
+## Getting Started
+
+### 1. Clone the repository
+
+```bash
+git clone https://github.com/Harjas500/nyc-taxi-revenue-forecasting.git
+cd nyc-taxi-revenue-forecasting
+```
+
+### 2. Create and activate a virtual environment
+
+```bash
+python3 -m venv venv
+source venv/bin/activate
+```
+
+For Windows:
+
+```bash
+venv\Scripts\activate
+```
+
+### 3. Install dependencies
+
+```bash
+pip install -r requirements.txt
+```
+
+### 4. Run the notebook
+
 ```bash
 jupyter notebook notebooks/Assignment1_ADS.ipynb
 ```
 
 ## Reproducibility
-- Yellow Taxi parquet files are downloaded automatically when the notebook runs.  
-- Parks events CSV is uploaded and cleaned in the notebook.  
-- Holidays CSV was created from PDF to CSV and uploaded.  
-- Figures and outputs are stored in `nyc_yellow_2024_run/`.  
 
+- NYC Yellow Taxi Parquet files are downloaded automatically when the notebook runs.
+- The parks events dataset is loaded and cleaned during notebook execution.
+- The 2024 public holidays dataset is provided in the `data/` directory.
+- Generated figures, tables, logs, and evaluation summaries are stored in `nyc_yellow_2024_run/`.
+
+---
+
+**Author:** Harjas Singh  
+**GitHub:** [Harjas500](https://github.com/Harjas500)
